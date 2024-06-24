@@ -1,0 +1,11 @@
+<div class="layer-switch-panel">
+    <button mat-button class="add-layer-box" (click)="openLayerDialog()">Add Layer</button>
+    <div class="layer-theme" *ngFor="let theme of layerThemes">
+      <h3 class="layer-theme-name">{{ theme.name }}</h3>
+      <button mat-button class="add-sublayer-button" (click)="addSublayer(theme)">Add Sublayers</button>
+      <div class="sublayers" *ngFor="let sublayer of theme.sublayers">
+        <p class="sublayer">{{ sublayer.name }} ({{ sublayer.type }})</p>
+      </div>
+    </div>
+  </div>
+  
